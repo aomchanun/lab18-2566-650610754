@@ -30,7 +30,7 @@ export const GET = async (request) => {
   }
 
   //Check role here. If user is "ADMIN" show all of the enrollments instead
-  if (role == "ADMIN")
+  if (role === "ADMIN")
     return NextResponse.json({
       ok: true,
       enrollments: DB.enrollments, //replace null with enrollment data!
